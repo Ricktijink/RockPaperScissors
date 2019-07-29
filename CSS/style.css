@@ -1,0 +1,144 @@
+@import url("https:fonts.googleapis.com/css?family=Roboto");
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal .modal-content {
+  background: #FFFFFF;
+  text-align: center;
+  width: 350px;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+.modal .modal-content h1 {
+  margin-bottom: 1rem;
+}
+.modal .modal-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.modal .modal-content .text-win {
+  color: #28a745;
+}
+.modal .modal-content .text-lose {
+  color: #dc3545;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background: #e9e9e9;
+  color: #333333;
+}
+
+.container {
+  overflow: hidden;
+  text-align: center;
+}
+.container header {
+  background: #FFF;
+  border-bottom: 1px solid #aeaeae;
+  text-align: center;
+  height: auto;
+}
+.container header h1 {
+  padding: 1rem;
+}
+.container header .score {
+  display: flex;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+}
+.container header .score p:first-child {
+  padding: 0.6rem;
+  flex: 1;
+  background: #003699;
+}
+.container header .score p:last-child {
+  padding: 0.6rem;
+  flex: 1;
+  background: #333333;
+}
+
+.restart-btn {
+  display: none;
+  background: #f4f4f4;
+  color: #333333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 2rem auto;
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 46px);
+}
+.restart-btn:hover {
+  background: #003699;
+  color: #FFFFFF;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 134px);
+}
+.choices .choice {
+  flex: 1;
+  font-size: 10rem;
+  cursor: pointer;
+}
+.choices .choice:hover {
+  color: #003699;
+}
+
+@media (max-width: 700px) {
+  .choices .choice {
+    font-size: 110px;
+  }
+  .choices .choice:hover {
+    color: red;
+  }
+}
+@media (max-width: 500px) {
+  .choices {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .choices .choice {
+    font-size: 90px;
+  }
+  .choices .choice:hover {
+    color: green;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
